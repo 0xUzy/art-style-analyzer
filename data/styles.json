@@ -1,0 +1,2312 @@
+{
+  "styles": [
+    {
+      "name": "Photorealistic",
+      "era": "Modern Digital",
+      "movement": "Photorealism",
+      "characteristics": {
+        "saturation": {
+          "min": 0.25,
+          "max": 0.6
+        },
+        "brightness": {
+          "min": 0.35,
+          "max": 0.75
+        },
+        "edge_density": {
+          "min": 0.2,
+          "max": 0.55
+        },
+        "color_diversity": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "contrast": {
+          "min": 0.25,
+          "max": 0.6
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.65
+        },
+        "texture_variance": {
+          "min": 0.15,
+          "max": 0.45
+        }
+      },
+      "palette_bias": [
+        "natural_tones",
+        "skin_tones",
+        "earth_tones",
+        "sky_blue",
+        "green"
+      ],
+      "techniques": [
+        "Hyper-detailed rendering",
+        "Accurate light and shadow behavior",
+        "Photographic depth of field",
+        "Realistic material textures (skin, metal, fabric)",
+        "Subtle color gradations"
+      ],
+      "mood": [
+        "realistic",
+        "detailed",
+        " lifelike",
+        "immersive",
+        "convincing"
+      ],
+      "description": "Photorealistic digital art aims to replicate the look of a photograph. Every surface, reflection, and shadow follows real-world physics, often indistinguishable from a camera capture.",
+      "style_transfer_prompt": "Convert this image into hyper-realistic photorealistic digital art. Render every surface, reflection, and shadow with real-world physics accuracy. Use photographic depth of field with subtle bokeh effects. Apply accurate subsurface scattering on skin, realistic material textures (skin pores, fabric weave, metal reflections), and natural color gradations with imperceptible transitions. Lighting should mimic real-world studio or natural light setups with soft diffused shadows. The final result should be indistinguishable from a high-end DSLR photograph captured with a prime lens. Ultra-detailed 8K resolution, raw photo quality.",
+      "influences": "Photography, cinematography, ray-tracing rendering",
+      "key_artists": [
+        "Erik Johansson",
+        "Dylan Cole",
+        "Craig Mullins",
+        "Maciej Kuciara"
+      ]
+    },
+    {
+      "name": "Anime",
+      "era": "Modern Digital",
+      "movement": "Anime / Manga",
+      "characteristics": {
+        "saturation": {
+          "min": 0.5,
+          "max": 0.85
+        },
+        "brightness": {
+          "min": 0.5,
+          "max": 0.85
+        },
+        "edge_density": {
+          "min": 0.15,
+          "max": 0.4
+        },
+        "color_diversity": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "contrast": {
+          "min": 0.3,
+          "max": 0.65
+        },
+        "warmth": {
+          "min": 0.4,
+          "max": 0.75
+        },
+        "texture_variance": {
+          "min": 0.1,
+          "max": 0.4
+        }
+      },
+      "palette_bias": [
+        "bright_blue",
+        "pink",
+        "purple",
+        "warm_skin",
+        "light_blue"
+      ],
+      "techniques": [
+        "Large expressive eyes with highlights",
+        "Clean line art with flat color fills",
+        "Cel-shading with soft gradient shadows",
+        "Exaggerated hair with vivid colors",
+        "Speed lines and emotional effects"
+      ],
+      "mood": [
+        "expressive",
+        "emotional",
+        "dynamic",
+        "vibrant",
+        "dramatic"
+      ],
+      "description": "Anime style features large expressive eyes, vivid hair colors, clean linework, and cel-shaded coloring. It emphasizes emotion and dynamic posing with stylized anatomy.",
+      "style_transfer_prompt": "Convert this image into authentic Japanese anime/manga art style. Use clean black line art with precise, confident strokes. Apply cel-shading with 2-3 tone soft gradient shadows. Render large expressive eyes with multiple light reflections and catchlights. Simplify facial anatomy with a small pointed nose, minimal lip definition, and smooth skin without pores. Add subtle background blur with bokeh circles and atmospheric light particles. Studio Ghibli meets modern anime aesthetic, 1080p cel animation look.",
+      "influences": "Japanese manga, Studio Ghibli, Makoto Shinkai, traditional cel animation",
+      "key_artists": [
+        "Hayao Miyazaki",
+        "Makoto Shinkai",
+        "Yoshitaka Amano",
+        "Range Murata"
+      ]
+    },
+    {
+      "name": "Comic Book",
+      "era": "Modern Digital",
+      "movement": "Western Comics",
+      "characteristics": {
+        "saturation": {
+          "min": 0.6,
+          "max": 0.95
+        },
+        "brightness": {
+          "min": 0.45,
+          "max": 0.8
+        },
+        "edge_density": {
+          "min": 0.3,
+          "max": 0.65
+        },
+        "color_diversity": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "contrast": {
+          "min": 0.45,
+          "max": 0.85
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "texture_variance": {
+          "min": 0.15,
+          "max": 0.45
+        }
+      },
+      "palette_bias": [
+        "bright_red",
+        "blue",
+        "yellow",
+        "bold_orange",
+        "green"
+      ],
+      "techniques": [
+        "Heavy black outlines (inks)",
+        "Bold, saturated flat colors",
+        "Ben-Day dots and halftone shading",
+        "Dynamic panel compositions",
+        "Dramatic chiaroscuro lighting"
+      ],
+      "mood": [
+        "bold",
+        "action-packed",
+        "graphic",
+        " punchy",
+        "heroic"
+      ],
+      "description": "Comic book style is defined by strong ink outlines, bold flat colors, dramatic lighting, and halftone shading. It prioritizes clarity, impact, and storytelling over realism.",
+      "style_transfer_prompt": "Convert this image into Western comic book / graphic novel art style. Apply heavy black ink outlines with varying line weights (thicker on shadow sides, thinner on lit sides). Add Ben-Day dots and halftone screen patterns for shading and texture. Use dramatic chiaroscuro lighting with high-contrast shadows that cut across faces. Render dynamic, heroic compositions with forced perspective and dramatic camera angles. Include ink hatching and cross-hatching for texture on clothing and backgrounds. Jim Lee and Alex Ross inspired, comic panel quality, CMYK print aesthetic.",
+      "influences": "Marvel/DC comics, Jack Kirby, Frank Miller, pop art",
+      "key_artists": [
+        "Jack Kirby",
+        "Frank Miller",
+        "Jim Lee",
+        "Alex Ross"
+      ]
+    },
+    {
+      "name": "Cartoon / Cel-Shaded",
+      "era": "Modern Digital",
+      "movement": "Cartoon",
+      "characteristics": {
+        "saturation": {
+          "min": 0.6,
+          "max": 0.95
+        },
+        "brightness": {
+          "min": 0.55,
+          "max": 0.9
+        },
+        "edge_density": {
+          "min": 0.15,
+          "max": 0.4
+        },
+        "color_diversity": {
+          "min": 0.6,
+          "max": 0.95
+        },
+        "contrast": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "warmth": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "texture_variance": {
+          "min": 0.05,
+          "max": 0.25
+        }
+      },
+      "palette_bias": [
+        "bright_red",
+        "yellow",
+        "blue",
+        "green",
+        "orange"
+      ],
+      "techniques": [
+        "Flat color fills with minimal gradients",
+        "Clean, bold outlines",
+        "Simplified shapes and proportions",
+        "Exaggerated expressions and poses",
+        "Minimal texture, smooth surfaces"
+      ],
+      "mood": [
+        "playful",
+        "lighthearted",
+        "fun",
+        "whimsical",
+        "approachable"
+      ],
+      "description": "Cartoon and cel-shaded styles use flat colors, clean outlines, and simplified forms. The look is smooth, colorful, and deliberately non-realistic for charm and readability.",
+      "style_transfer_prompt": "Convert this image into cartoon / cel-shaded animation art style. Use clean, bold black outlines with consistent uniform line weight. Backgrounds should be simplified geometric forms. Disney and Cartoon Network style, 2D animation cel quality, playful and bouncy aesthetic.",
+      "influences": "Traditional animation, Disney, Cartoon Network, anime cel-shading",
+      "key_artists": [
+        "Genndy Tartakovsky",
+        "Pendleton Ward",
+        "Claudio Silveira",
+        "Aaron Blaise"
+      ]
+    },
+    {
+      "name": "Semi-Realistic",
+      "era": "Modern Digital",
+      "movement": "Semi-Realism",
+      "characteristics": {
+        "saturation": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "brightness": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "edge_density": {
+          "min": 0.18,
+          "max": 0.48
+        },
+        "color_diversity": {
+          "min": 0.45,
+          "max": 0.85
+        },
+        "contrast": {
+          "min": 0.3,
+          "max": 0.65
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "texture_variance": {
+          "min": 0.2,
+          "max": 0.55
+        }
+      },
+      "palette_bias": [
+        "soft_blue",
+        "warm_skin",
+        "muted_green",
+        "golden",
+        "lavender"
+      ],
+      "techniques": [
+        "Realistic proportions with stylized rendering",
+        "Soft blending with visible brushwork",
+        "Painterly color mixing",
+        "Idealized lighting and atmosphere",
+        "Balanced detail \u2014 not photographic, not flat"
+      ],
+      "mood": [
+        "dreamy",
+        "polished",
+        "illustrative",
+        "elegant",
+        "artistic"
+      ],
+      "description": "Semi-realistic style blends real-world anatomy and lighting with painterly, stylized rendering. Popular in game art, book covers, and character illustration.",
+      "style_transfer_prompt": "Convert this image into semi-realistic digital painting art style. Use realistic anatomical proportions but with stylized, painterly rendering. Apply soft blending with visible digital brush strokes and canvas texture. Use painterly color mixing \u2014 colors should not be flat but have subtle variations and temperature shifts within the same surface. Render idealized lighting with soft rim lights, warm key lights, and atmospheric glow. Maintain balanced detail: skin has texture but is not photographic, hair has visible brush strokes, fabrics have painterly folds rather than photorealistic weave. Backgrounds should have atmospheric perspective with softened edges. Artgerm and WLOP inspired, concept art quality, elegant illustrative aesthetic.",
+      "influences": "Classical painting, concept art, digital painting communities",
+      "key_artists": [
+        "Artgerm (Lawrence Mann)",
+        "Ross Tran",
+        "WLOP",
+        "Guweiz"
+      ]
+    },
+    {
+      "name": "Pixel Art",
+      "era": "Retro Digital",
+      "movement": "Pixel Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "brightness": {
+          "min": 0.4,
+          "max": 0.85
+        },
+        "edge_density": {
+          "min": 0.3,
+          "max": 0.7
+        },
+        "color_diversity": {
+          "min": 0.2,
+          "max": 0.6
+        },
+        "contrast": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "texture_variance": {
+          "min": 0.05,
+          "max": 0.2
+        }
+      },
+      "palette_bias": [
+        "bright_red",
+        "blue",
+        "green",
+        "yellow",
+        "brown"
+      ],
+      "techniques": [
+        "Visible individual pixels as building blocks",
+        "Limited color palettes (16-64 colors)",
+        "Dithering for gradients",
+        "No anti-aliasing on edges",
+        "Retro 8-bit or 16-bit aesthetic"
+      ],
+      "mood": [
+        "nostalgic",
+        "retro",
+        "crisp",
+        "charming",
+        "minimal"
+      ],
+      "description": "Pixel art uses individually placed pixels to form images with a deliberately low-resolution, retro aesthetic. Color palettes are restricted and dithering creates the illusion of smooth gradients.",
+      "style_transfer_prompt": "Convert this image into authentic pixel art style. Render at low resolution with visible individual pixels as the primary building blocks \u2014 every detail resolved at the pixel level. Apply dithering patterns (checkerboard, Bayer, Floyd-Steinberg) for gradient transitions and shadows instead of smooth blends. All edges must be crisp and aliased \u2014 no soft transitions whatsoever. Maintain square pixel aspect ratio throughout. Add subtle color banding as found in 8-bit and 16-bit era graphics. SNES/Genesis era quality, retro game sprite aesthetic, 16-bit pixel art, no smoothing or anti-aliasing.",
+      "influences": "8-bit/16-bit video games, NES/SNES era, demoscene",
+      "key_artists": [
+        "eBoy",
+        "PixelJeff",
+        "Waneella",
+        "Salem Krieg"
+      ]
+    },
+    {
+      "name": "3D Render / CGI",
+      "era": "Modern Digital",
+      "movement": "3D Digital Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.32,
+          "max": 0.7
+        },
+        "brightness": {
+          "min": 0.4,
+          "max": 0.78
+        },
+        "edge_density": {
+          "min": 0.22,
+          "max": 0.52
+        },
+        "color_diversity": {
+          "min": 0.42,
+          "max": 0.8
+        },
+        "contrast": {
+          "min": 0.32,
+          "max": 0.68
+        },
+        "warmth": {
+          "min": 0.32,
+          "max": 0.68
+        },
+        "texture_variance": {
+          "min": 0.28,
+          "max": 0.58
+        }
+      },
+      "palette_bias": [
+        "natural_tones",
+        "metallic",
+        "blue_sky",
+        "warm_light",
+        "cool_shadow"
+      ],
+      "techniques": [
+        "Physically-based rendering (PBR)",
+        "Accurate global illumination",
+        "Subsurface scattering on skin",
+        "Realistic reflections and refractions",
+        "Ambient occlusion and volumetric light"
+      ],
+      "mood": [
+        "cinematic",
+        "polished",
+        "tactile",
+        "immersive",
+        "modern"
+      ],
+      "description": "3D rendered art uses computer-generated geometry with physically-based materials and lighting. The result is a clean, cinematic look with realistic depth, reflections, and material properties.",
+      "style_transfer_prompt": "Convert this image into 3D rendered CGI digital art. Apply physically-based rendering (PBR) with accurate global illumination and ambient occlusion. Render realistic subsurface scattering on skin surfaces. Use physically accurate reflections and refractions on glass, metal, and water materials. Add volumetric light rays and atmospheric haze for depth. Surfaces should show proper roughness/metallic material properties \u2014 matte plastic, polished metal, glossy ceramic each behaving distinctly. Depth of field should match a rendered camera with realistic bokeh. Pixar and Unreal Engine 5 quality, path-traced lighting, cinematic 4K render output.",
+      "influences": "Pixar, Unreal Engine, Blender community, VFX industry",
+      "key_artists": [
+        "Beeple (Mike Winkelmann)",
+        "Ian McLaughlin",
+        "Goro Fujid",
+        "Sachin Teng"
+      ]
+    },
+    {
+      "name": "Flat Design / Vector",
+      "era": "Modern Digital",
+      "movement": "Flat Design",
+      "characteristics": {
+        "saturation": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "brightness": {
+          "min": 0.55,
+          "max": 0.9
+        },
+        "edge_density": {
+          "min": 0.08,
+          "max": 0.25
+        },
+        "color_diversity": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "contrast": {
+          "min": 0.3,
+          "max": 0.6
+        },
+        "warmth": {
+          "min": 0.4,
+          "max": 0.75
+        },
+        "texture_variance": {
+          "min": 0.01,
+          "max": 0.1
+        }
+      },
+      "palette_bias": [
+        "bright_blue",
+        "teal",
+        "coral",
+        "yellow",
+        "light_gray"
+      ],
+      "techniques": [
+        "No textures or gradients",
+        "Geometric shapes and clean edges",
+        "Bold, solid color blocks",
+        "Minimal detail, maximum clarity",
+        "Strong use of negative space"
+      ],
+      "mood": [
+        "clean",
+        "modern",
+        "minimal",
+        "professional",
+        "friendly"
+      ],
+      "description": "Flat design strips away all texture, depth, and ornamentation. It relies on simple shapes, bold colors, and generous whitespace for a clean, modern aesthetic.",
+      "style_transfer_prompt": "Convert this image into flat design vector illustration art style. Strip away all texture, gradients, and 3D depth \u2014 every element must be perfectly flat. Use bold, solid color blocks with high saturation and no blending between color regions. Render clean, precise geometric edges with anti-aliased but sharp boundaries. Simplify all shapes to their essential geometric forms: circles, rounded rectangles, and clean polygons. Use generous negative space and strong compositional balance. No drop shadows, no gradients, no textures of any kind. Swiss design meets modern UI illustration, Bauhaus minimalism.",
+      "influences": "Swiss design, Bauhaus, material design, UI/UX trends",
+      "key_artists": [
+        "Tad Carpenter",
+        "Luba Lukova",
+        "Noma Bar",
+        "Oscar Wirfrmalm"
+      ]
+    },
+    {
+      "name": "Low Poly",
+      "era": "Modern Digital",
+      "movement": "Low Poly Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "brightness": {
+          "min": 0.45,
+          "max": 0.85
+        },
+        "edge_density": {
+          "min": 0.35,
+          "max": 0.75
+        },
+        "color_diversity": {
+          "min": 0.3,
+          "max": 0.7
+        },
+        "contrast": {
+          "min": 0.3,
+          "max": 0.6
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "texture_variance": {
+          "min": 0.1,
+          "max": 0.35
+        }
+      },
+      "palette_bias": [
+        "teal",
+        "orange",
+        "purple",
+        "green",
+        "blue"
+      ],
+      "techniques": [
+        "Visible polygonal facets",
+        "Geometric triangulation of forms",
+        "Flat shading per face (no smoothing)",
+        "Simplified silhouette",
+        "Faceted color transitions"
+      ],
+      "mood": [
+        "geometric",
+        "abstract",
+        "modern",
+        "crystalline",
+        "minimal"
+      ],
+      "description": "Low poly art reduces forms to visible triangular facets, creating a geometric, crystalline look. Each face is flat-shaded, producing sharp color transitions without smooth blending.",
+      "style_transfer_prompt": "Convert this image into low poly 3D art style. Reduce all forms and surfaces to visible triangular polygon facets \u2014 every curve becomes a faceted geometric approximation. Apply flat shading per polygon face with no smooth shading or normal interpolation \u2014 each triangle has one solid color. Use faceted color transitions where adjacent polygons have slightly different hue/brightness values creating a crystalline look. Render simplified silhouettes that approximate organic shapes with geometric triangulation. Light the scene with a single directional light source to emphasize the faceted surfaces. Origami meets Delaunay triangulation aesthetic, no smooth surfaces whatsoever.",
+      "influences": "Early 3D graphics, Delaunay triangulation, origami",
+      "key_artists": [
+        "Beeple",
+        "Henrik Larsson",
+        "Thomas Veyrat",
+        "Renju"
+      ]
+    },
+    {
+      "name": "Cyberpunk",
+      "era": "Modern Digital",
+      "movement": "Cyberpunk",
+      "characteristics": {
+        "saturation": {
+          "min": 0.5,
+          "max": 0.85
+        },
+        "brightness": {
+          "min": 0.2,
+          "max": 0.55
+        },
+        "edge_density": {
+          "min": 0.3,
+          "max": 0.65
+        },
+        "color_diversity": {
+          "min": 0.45,
+          "max": 0.82
+        },
+        "contrast": {
+          "min": 0.5,
+          "max": 0.85
+        },
+        "warmth": {
+          "min": 0.2,
+          "max": 0.5
+        },
+        "texture_variance": {
+          "min": 0.4,
+          "max": 0.8
+        }
+      },
+      "palette_bias": [
+        "neon_pink",
+        "neon_blue",
+        "electric_purple",
+        "dark_teal",
+        "black"
+      ],
+      "techniques": [
+        "Neon lighting against dark environments",
+        "High contrast light sources",
+        "Glowing UI elements and holograms",
+        "Rain, reflections, and wet surfaces",
+        "Gritty, layered urban textures"
+      ],
+      "mood": [
+        "neon-lit",
+        "dystopian",
+        "edgy",
+        "high-tech",
+        "atmospheric"
+      ],
+      "description": "Cyberpunk art combines dark, gritty urban environments with vivid neon lighting. It contrasts high-tech elements (holograms, cybernetics) with decay and social unrest.",
+      "style_transfer_prompt": "Convert this image into cyberpunk digital art style. Set the scene in a dark, rain-soaked urban environment with neon lighting as the primary illumination source. Add holographic UI elements, floating AR interfaces, and glitch scanline effects. Render surfaces with rain-streaked reflections and volumetric fog illuminated by neon signs. Use high contrast lighting \u2014 deep blacks against intensely bright neon highlights. Add cybernetic augmentation details, LED strips, and industrial grime textures. Gritty layered urban textures with atmospheric haze. Blade Runner meets Ghost in the Shell aesthetic, dystopian neon-noir, cinematic color grading with crushed blacks and clipped neon highlights.",
+      "influences": "Blade Runner, Ghost in the Shell, Syd Mead, neon aesthetics",
+      "key_artists": [
+        "Syd Mead",
+        "Maciej Kuciara",
+        "Josan Gonzalez",
+        "Beeple"
+      ]
+    },
+    {
+      "name": "Synthwave / Retrowave",
+      "era": "Modern Digital",
+      "movement": "Synthwave",
+      "characteristics": {
+        "saturation": {
+          "min": 0.6,
+          "max": 0.95
+        },
+        "brightness": {
+          "min": 0.3,
+          "max": 0.7
+        },
+        "edge_density": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "color_diversity": {
+          "min": 0.3,
+          "max": 0.7
+        },
+        "contrast": {
+          "min": 0.5,
+          "max": 0.85
+        },
+        "warmth": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "texture_variance": {
+          "min": 0.15,
+          "max": 0.5
+        }
+      },
+      "palette_bias": [
+        "hot_pink",
+        "electric_blue",
+        "purple",
+        "orange_sunset",
+        "black"
+      ],
+      "techniques": [
+        "Gradient skies (sunset purple to orange)",
+        "Grid perspective lines receding to horizon",
+        "Neon outlines and glow effects",
+        "Chrome and metallic reflections",
+        "Silhouettes against vivid backgrounds"
+      ],
+      "mood": [
+        "nostalgic",
+        "electric",
+        "dreamy",
+        "retro-futuristic",
+        "vaporwave"
+      ],
+      "description": "Synthwave blends 1980s retro aesthetics with digital neon. Gradient sunsets, chrome surfaces, perspective grids, and silhouetted figures create a nostalgic, neon-drenched atmosphere.",
+      "style_transfer_prompt": "Convert this image into synthwave / retrowave art style. Render subjects as dark silhouettes against the vibrant gradient background. Add chrome and metallic reflections with sharp specular highlights. Include VHS-style scanlines, chromatic aberration on edges, and subtle film grain. Star field elements in the upper sky. 1980s Outrun aesthetic, retro-futuristic, cassette futurism, neon-drenched vaporwave vibes.",
+      "influences": "1980s pop culture, Outrun, VHS aesthetics, John Carpenter soundtracks",
+      "key_artists": [
+        "James White (Signalnoise)",
+        "Josan Gonzalez",
+        "Romain Jouandeau",
+        "Kelley Blue"
+      ]
+    },
+    {
+      "name": "Fantasy Illustration",
+      "era": "Modern Digital",
+      "movement": "Fantasy Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.48,
+          "max": 0.82
+        },
+        "brightness": {
+          "min": 0.38,
+          "max": 0.72
+        },
+        "edge_density": {
+          "min": 0.22,
+          "max": 0.52
+        },
+        "color_diversity": {
+          "min": 0.5,
+          "max": 0.85
+        },
+        "contrast": {
+          "min": 0.38,
+          "max": 0.72
+        },
+        "warmth": {
+          "min": 0.38,
+          "max": 0.72
+        },
+        "texture_variance": {
+          "min": 0.38,
+          "max": 0.75
+        }
+      },
+      "palette_bias": [
+        "golden",
+        "emerald",
+        "deep_blue",
+        "ruby",
+        "ivory"
+      ],
+      "techniques": [
+        "Painterly rendering with rich textures",
+        "Dramatic atmospheric lighting",
+        "Detailed environments and costumes",
+        "Magical glow effects and particles",
+        "Epic scale and heroic compositions"
+      ],
+      "mood": [
+        "epic",
+        "magical",
+        "immersive",
+        "grand",
+        "mythic"
+      ],
+      "description": "Fantasy illustration brings imaginary worlds to life with painterly rendering, epic scale, and magical atmosphere. It balances realism with wonder, making the impossible feel tangible.",
+      "style_transfer_prompt": "Convert this image into epic fantasy illustration art style. Use rich, painterly rendering with visible brush strokes and heavy canvas texture. Apply dramatic atmospheric lighting with strong directional light \u2014 golden hour sunbeams, magical glow effects, and luminous particle effects (floating sparks, ethereal dust, fireflies). Render detailed environments with epic scale: towering castle spires, vast mountain ranges, ancient forest canopies. Use heroic composition with dynamic posing and sweeping diagonal lines. Balance realism with wonder \u2014 make the impossible feel tangible and immersive. Frank Frazetta and Alan Lee inspired, Dungeons & Dragons cover art quality, mythic and grandiose atmosphere.",
+      "influences": "Lord of the Rings, Dungeons & Dragons, Frank Frazetta, Arthur Rackham",
+      "key_artists": [
+        "Frank Frazetta",
+        "Boris Vallejo",
+        "Alan Lee",
+        "Kekai Kotaki"
+      ]
+    },
+    {
+      "name": "Concept Art",
+      "era": "Modern Digital",
+      "movement": "Concept Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.32,
+          "max": 0.68
+        },
+        "brightness": {
+          "min": 0.35,
+          "max": 0.72
+        },
+        "edge_density": {
+          "min": 0.18,
+          "max": 0.48
+        },
+        "color_diversity": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "contrast": {
+          "min": 0.3,
+          "max": 0.68
+        },
+        "warmth": {
+          "min": 0.32,
+          "max": 0.68
+        },
+        "texture_variance": {
+          "min": 0.35,
+          "max": 0.7
+        }
+      },
+      "palette_bias": [
+        "muted_blue",
+        "warm_gray",
+        "accent_orange",
+        "desaturated_green",
+        "sky"
+      ],
+      "techniques": [
+        "Loose, expressive brushwork",
+        "Thumbnail-style speed paintings",
+        "Strong value structure and silhouettes",
+        "Limited detail in non-focal areas",
+        "Color keys and mood studies"
+      ],
+      "mood": [
+        "atmospheric",
+        "evocative",
+        "exploratory",
+        "painterly",
+        "cinematic"
+      ],
+      "description": "Concept art prioritizes mood, composition, and visual storytelling over polish. Loose brushwork and strong silhouettes communicate ideas quickly for film, game, and animation pre-production.",
+      "style_transfer_prompt": "Convert this image into professional concept art style. Use loose, expressive brushwork with visible, energetic strokes \u2014 thumbnails and speed-painting quality rather than polished final art. Prioritize mood and visual storytelling over detail: strong readable silhouettes, atmospheric perspective, and color key studies. Apply a strong value structure with clear light/dark separation. Keep detail concentrated only in the focal area; non-focal regions should remain loose and suggestive with broad brush marks. Include multiple composition thumbnails or variations around the main subject. Craig Mullins and Feng Zhu inspired, film/game pre-production quality, cinematic and evocative atmosphere.",
+      "influences": "Film and game industry, matte painting, plein air painting",
+      "key_artists": [
+        "Craig Mullins",
+        "Feng Zhu",
+        "Sparth (Nicolas Bouvier)",
+        "Yongsub Noh"
+      ]
+    },
+    {
+      "name": "Ink Wash / Sumi-e",
+      "era": "Modern Digital",
+      "movement": "Digital Ink Wash",
+      "characteristics": {
+        "saturation": {
+          "min": 0.05,
+          "max": 0.3
+        },
+        "brightness": {
+          "min": 0.35,
+          "max": 0.85
+        },
+        "edge_density": {
+          "min": 0.1,
+          "max": 0.4
+        },
+        "color_diversity": {
+          "min": 0.05,
+          "max": 0.25
+        },
+        "contrast": {
+          "min": 0.35,
+          "max": 0.75
+        },
+        "warmth": {
+          "min": 0.3,
+          "max": 0.6
+        },
+        "texture_variance": {
+          "min": 0.25,
+          "max": 0.65
+        }
+      },
+      "palette_bias": [
+        "black",
+        "warm_gray",
+        "cool_gray",
+        "off_white",
+        "sepia"
+      ],
+      "techniques": [
+        "Ink splatter and wash effects",
+        "Brushstroke-driven mark making",
+        "Minimal color, emphasis on value",
+        "Negative space as composition",
+        "Visible bristle texture and bleed"
+      ],
+      "mood": [
+        "meditative",
+        "elegant",
+        "minimal",
+        "flowing",
+        "contemplative"
+      ],
+      "description": "Digital ink wash emulates traditional East Asian brush painting with flowing ink tones, splatters, and expressive negative space. It communicates maximum mood with minimal means.",
+      "style_transfer_prompt": "Convert this image into ink wash / sumi-e brush painting art style. Render all forms with expressive, flowing brush strokes \u2014 visible bristle texture, ink bleed at stroke edges, and varying opacity from a single brush load. Use negative space extensively: large areas of the canvas left intentionally empty to suggest mist, water, or sky. Apply ink splatter effects, dry brush textures, and controlled drip marks. Emphasize value over color, gesture over detail. Everything should feel fluid, meditative, and spontaneous. Chinese brush painting and Japanese sumi-e tradition, calligraphic line quality, zen aesthetic.",
+      "influences": "Chinese brush painting, Japanese sumi-e, calligraphy, Zen aesthetics",
+      "key_artists": [
+        "James Jean",
+        "Katsuya Terada",
+        "Goni Montes",
+        "Enki Bilal"
+      ]
+    },
+    {
+      "name": "Photography / Natural Photo",
+      "era": "Modern",
+      "movement": "Photography",
+      "characteristics": {
+        "saturation": {
+          "min": 0.22,
+          "max": 0.55
+        },
+        "brightness": {
+          "min": 0.32,
+          "max": 0.78
+        },
+        "edge_density": {
+          "min": 0.25,
+          "max": 0.62
+        },
+        "color_diversity": {
+          "min": 0.55,
+          "max": 0.95
+        },
+        "contrast": {
+          "min": 0.22,
+          "max": 0.55
+        },
+        "warmth": {
+          "min": 0.38,
+          "max": 0.62
+        },
+        "texture_variance": {
+          "min": 0.08,
+          "max": 0.35
+        }
+      },
+      "palette_bias": [
+        "natural_tones",
+        "sky_blue",
+        "green",
+        "warm_gray",
+        "brown"
+      ],
+      "techniques": [
+        "Natural lighting with realistic dynamic range",
+        "Lens-based depth of field and bokeh",
+        "Film grain or sensor noise texture",
+        "Accurate color temperature and white balance",
+        "Real-world texture detail without artistic exaggeration"
+      ],
+      "mood": [
+        "authentic",
+        "documentary",
+        "natural",
+        "candid",
+        "atmospheric"
+      ],
+      "description": "Natural photography captures the world as seen through a camera lens. It features realistic dynamic range, natural color balance, lens characteristics like bokeh and depth of field, and subtle film grain or sensor texture.",
+      "style_transfer_prompt": "Convert this image into a natural photograph captured with a professional DSLR camera. Use a 50mm prime lens with natural depth of field and smooth bokeh in out-of-focus areas. Apply realistic dynamic range with detail preserved in both highlights and shadows. Render accurate color temperature as captured by the camera sensor \u2014 no artistic color grading, just natural white balance. Add subtle film grain or high-ISO sensor noise texture. Lighting should appear natural: window light, golden hour sun, or soft overcast diffusion. Include realistic lens characteristics: slight vignetting, natural chromatic aberration at high-contrast edges, and realistic sharpness falloff at frame edges. Raw photo aesthetic, National Geographic documentary style, unprocessed and authentic.",
+      "influences": "Documentary photography, National Geographic, street photography, prime lens aesthetics",
+      "key_artists": [
+        "Steve McCurry",
+        "Annie Leibovitz",
+        "Sebastiao Salgado",
+        "Vivian Maier"
+      ]
+    },
+    {
+      "name": "Watercolor",
+      "era": "Classical / Modern",
+      "movement": "Watercolor Painting",
+      "characteristics": {
+        "saturation": {
+          "min": 0.12,
+          "max": 0.42
+        },
+        "brightness": {
+          "min": 0.52,
+          "max": 0.92
+        },
+        "edge_density": {
+          "min": 0.06,
+          "max": 0.28
+        },
+        "color_diversity": {
+          "min": 0.28,
+          "max": 0.68
+        },
+        "contrast": {
+          "min": 0.14,
+          "max": 0.42
+        },
+        "warmth": {
+          "min": 0.32,
+          "max": 0.62
+        },
+        "texture_variance": {
+          "min": 0.35,
+          "max": 0.68
+        }
+      },
+      "palette_bias": [
+        "soft_blue",
+        "pale_pink",
+        "muted_green",
+        "warm_wash",
+        "paper_white"
+      ],
+      "techniques": [
+        "Transparent color washes with visible paper texture",
+        "Soft, bleeding edges where pigments bloom",
+        "Wet-on-wet blending with granulation",
+        "White paper showing through for highlights",
+        "Delicate, layered washes building color depth"
+      ],
+      "mood": [
+        "delicate",
+        "ethereal",
+        "fluid",
+        "luminous",
+        "airy"
+      ],
+      "description": "Watercolor painting uses transparent pigments suspended in water, creating luminous washes on textured paper. Colors bloom and bleed at edges, white paper shows through for highlights, and wet-on-wet techniques create organic, fluid blends.",
+      "style_transfer_prompt": "Convert this image into a delicate watercolor painting on cold-pressed cotton paper. Apply transparent, luminous color washes \u2014 pigments should feel suspended in water with visible paper texture showing through everywhere. Use wet-on-wet bleeding edges where colors bloom and spread organically with granulation effects. White of the paper must serve as the primary highlight source \u2014 leave areas unpainted for the brightest highlights. Render soft, feathered edges with no hard lines; everything flows naturally. Build color depth through layered transparent washes (light to dark). Include watercolor-specific effects: cauliflowers/blooms at edges, pigment settling in paper tooth, and salt-texture effects. Winslow Homer and John Singer Sargent watercolor style, plein air aesthetic.",
+      "influences": "Winslow Homer, John Singer Sargent, Albrecht Durer, Chinese watercolor, botanical illustration",
+      "key_artists": [
+        "Winslow Homer",
+        "John Singer Sargent",
+        "J.M.W. Turner",
+        "Albrecht Durer",
+        "Georgia O'Keeffe"
+      ]
+    },
+    {
+      "name": "Pencil Sketch / Graphite",
+      "era": "Classical / Modern",
+      "movement": "Drawing",
+      "characteristics": {
+        "saturation": {
+          "min": 0.0,
+          "max": 0.1
+        },
+        "brightness": {
+          "min": 0.35,
+          "max": 0.85
+        },
+        "edge_density": {
+          "min": 0.1,
+          "max": 0.4
+        },
+        "color_diversity": {
+          "min": 0.02,
+          "max": 0.15
+        },
+        "contrast": {
+          "min": 0.3,
+          "max": 0.7
+        },
+        "warmth": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "texture_variance": {
+          "min": 0.2,
+          "max": 0.55
+        }
+      },
+      "palette_bias": [
+        "graphite_gray",
+        "charcoal_black",
+        "paper_white",
+        "warm_gray",
+        "smudge"
+      ],
+      "techniques": [
+        "Monochrome graphite or charcoal marks",
+        "Hatching and cross-hatching for tone",
+        "Visible pencil stroke direction and pressure",
+        "Paper tooth texture catching graphite",
+        "Smudged and blended shading with stumps"
+      ],
+      "mood": [
+        "intimate",
+        "raw",
+        "studious",
+        "tactile",
+        "immediate"
+      ],
+      "description": "Pencil and graphite drawing captures form through line and tonal shading. Hatching, cross-hatching, and smudging build value, while paper texture shows through. The monochrome medium emphasizes light, shadow, and contour.",
+      "style_transfer_prompt": "Convert this image into a graphite pencil sketch on textured drawing paper. Use visible pencil stroke direction with varying pressure \u2014 light feathering for highlights, heavy dark strokes for deep shadows. Apply hatching and cross-hatching techniques to build tonal values. Include smudged and blended areas created with a tortillon/stump for soft gradations. Paper tooth texture should catch and hold graphite, visible in mid-tone areas. Leave some construction lines and sketchy under-drawing visible for an in-progress, studio feel. Add subtle graphite dust and eraser marks at edges. Leonardo da Vinci and Kathe Kollwitz inspired, academic figure drawing quality, sketchbook aesthetic.",
+      "influences": "Leonardo da Vinci, Kathe Kollwitz, Albrecht Durer, academic figure drawing, sketchbook tradition",
+      "key_artists": [
+        "Leonardo da Vinci",
+        "Kathe Kollwitz",
+        "Albrecht Durer",
+        "M.C. Escher",
+        "Ingres"
+      ]
+    },
+    {
+      "name": "Steampunk",
+      "era": "Modern Alternative",
+      "movement": "Steampunk",
+      "characteristics": {
+        "saturation": {
+          "min": 0.22,
+          "max": 0.55
+        },
+        "brightness": {
+          "min": 0.2,
+          "max": 0.55
+        },
+        "edge_density": {
+          "min": 0.3,
+          "max": 0.7
+        },
+        "color_diversity": {
+          "min": 0.25,
+          "max": 0.6
+        },
+        "contrast": {
+          "min": 0.4,
+          "max": 0.78
+        },
+        "warmth": {
+          "min": 0.4,
+          "max": 0.75
+        },
+        "texture_variance": {
+          "min": 0.45,
+          "max": 0.85
+        }
+      },
+      "palette_bias": [
+        "brass",
+        "copper",
+        "dark_brown",
+        "leather_tan",
+        "steel_gray"
+      ],
+      "techniques": [
+        "Victorian-era industrial materials (brass, copper, leather)",
+        "Gears, cogs, and mechanical details",
+        "Steam and smoke atmospheric effects",
+        "Warm sepia-toned lighting",
+        "Intricate riveted metal textures"
+      ],
+      "mood": [
+        "industrial",
+        "nostalgic",
+        "adventurous",
+        "mechanical",
+        "atmospheric"
+      ],
+      "description": "Steampunk reimagines Victorian-era aesthetics through a lens of retro-futuristic technology. Brass, copper, leather, and steam-powered machinery dominate, with warm sepia lighting, intricate gears, and industrial textures throughout.",
+      "style_transfer_prompt": "Convert this image into Steampunk art style \u2014 Victorian era meets retro-futuristic steam-powered technology. Render all materials as Victorian industrial: polished brass, aged copper with verdigris patina, rich brown leather, dark mahogany wood, and riveted steel. Add intricate mechanical details everywhere: brass gears, clockwork mechanisms, steam pipes, pressure gauges, and copper boilers. Apply rich, dark metallic textures with visible wear \u2014 scratches on brass, patina on copper, worn leather edges. Victorian industrial revolution meets Jules Verne, intricate craftsmanship and mechanical wonder.",
+      "influences": "Jules Verne, H.G. Wells, Victorian industrial design, clockwork and steam engine aesthetics",
+      "key_artists": [
+        "Jules Verne (illustrated editions)",
+        "Brian Froud",
+        "Keith Thompson",
+        "Tom McGrath",
+        "James Ng"
+      ]
+    },
+    {
+      "name": "Editorial Illustration (2D)",
+      "era": "Modern",
+      "movement": "Editorial Illustration",
+      "characteristics": {
+        "saturation": {
+          "min": 0.3,
+          "max": 0.65
+        },
+        "brightness": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "edge_density": {
+          "min": 0.1,
+          "max": 0.32
+        },
+        "color_diversity": {
+          "min": 0.28,
+          "max": 0.62
+        },
+        "contrast": {
+          "min": 0.2,
+          "max": 0.5
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.65
+        },
+        "texture_variance": {
+          "min": 0.05,
+          "max": 0.25
+        }
+      },
+      "palette_bias": [
+        "teal",
+        "coral",
+        "mustard_yellow",
+        "navy",
+        "warm_gray"
+      ],
+      "techniques": [
+        "Clean, readable 2D compositions with flat shading",
+        "Bold, minimalist color blocking",
+        "Stylized simplified figures and objects",
+        "Subtle grain or paper texture overlay",
+        "Negative space used as active design element"
+      ],
+      "mood": [
+        "conceptual",
+        "polished",
+        "contemporary",
+        "editorial",
+        "sophisticated"
+      ],
+      "description": "Editorial illustration is a clean 2D style used in magazines and digital publications. It uses bold color blocking, stylized simplified forms, and strong conceptual composition to communicate ideas with visual clarity and sophistication.",
+      "style_transfer_prompt": "Convert this image into a modern 2D editorial illustration style suitable for magazines and digital publications. Use clean, flat vector-style shading with bold geometric color blocks \u2014 2-3 tone shading maximum, no gradients. Render simplified, stylized figures and objects with elegant proportions and intentional negative space. Add subtle grain or paper texture overlay for a premium printed feel. Lines should be clean and intentional with uniform weight. The composition should feel conceptual and designed \u2014 as if created for The New Yorker, The Atlantic, or a high-end editorial feature. Malika Favre and Christoph Niemann inspired, contemporary editorial aesthetic, flat 2D with occasional subtle halftone shading.",
+      "influences": "Malika Favre, Christoph Niemann, The New Yorker covers, NYT Op-Ed art, modern magazine illustration",
+      "key_artists": [
+        "Malika Favre",
+        "Christoph Niemann",
+        "Tom Haugomat",
+        "Lotta Nieminen",
+        "Olimpia Zagnoli"
+      ]
+    },
+    {
+      "name": "Ghibli Style",
+      "era": "Modern Digital",
+      "movement": "Studio Ghibli / Japanese Animation",
+      "characteristics": {
+        "saturation": {
+          "min": 0.3,
+          "max": 0.65
+        },
+        "brightness": {
+          "min": 0.4,
+          "max": 0.78
+        },
+        "edge_density": {
+          "min": 0.15,
+          "max": 0.38
+        },
+        "color_diversity": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "contrast": {
+          "min": 0.2,
+          "max": 0.52
+        },
+        "warmth": {
+          "min": 0.4,
+          "max": 0.72
+        },
+        "texture_variance": {
+          "min": 0.12,
+          "max": 0.38
+        }
+      },
+      "palette_bias": [
+        "soft_green",
+        "sky_blue",
+        "warm_golden",
+        "earth_brown",
+        "cream"
+      ],
+      "techniques": [
+        "Soft watercolor-style painted backgrounds",
+        "Hand-drawn cel animation look",
+        "Lush natural environments with attention to detail",
+        "Soft, diffused natural lighting",
+        "Simple character designs with expressive animation"
+      ],
+      "mood": [
+        "nostalgic",
+        "whimsical",
+        "peaceful",
+        "magical",
+        "heartfelt"
+      ],
+      "description": "Studio Ghibli style features lush hand-painted backgrounds with soft watercolor aesthetics, simple yet expressive character designs, warm natural lighting, and a deep appreciation for nature, food, and quiet moments. The world feels alive, detailed, and lovingly crafted.",
+      "style_transfer_prompt": "Convert this image into Studio Ghibli animation style. Render lush, hand-painted backgrounds with soft watercolor textures and meticulous attention to natural detail \u2014 every leaf, cloud, and blade of grass feels lovingly painted. Character designs should be simple and expressive with soft cel shading, subtle blush tones, and large emotive eyes. Add subtle film grain and a gentle glow over highlights. The overall feeling should be peaceful, magical, and deeply human \u2014 as if paused during a quiet moment in a Miyazaki film. Ghibli cel animation aesthetic, hand-drawn warmth, no harsh digital effects.",
+      "influences": "Hayao Miyazaki, Studio Ghibli, Isao Takahata, Japanese hand-drawn animation, watercolor painting",
+      "key_artists": [
+        "Hayao Miyazaki",
+        "Isao Takahata",
+        "Yoshifumi Kondo",
+        "Kazuo Oga",
+        "Hiromasa Yonebayashi"
+      ]
+    },
+    {
+      "name": "Chibi",
+      "era": "Modern Digital",
+      "movement": "Chibi / Super Deformed",
+      "characteristics": {
+        "saturation": {
+          "min": 0.5,
+          "max": 0.88
+        },
+        "brightness": {
+          "min": 0.5,
+          "max": 0.88
+        },
+        "edge_density": {
+          "min": 0.1,
+          "max": 0.32
+        },
+        "color_diversity": {
+          "min": 0.45,
+          "max": 0.85
+        },
+        "contrast": {
+          "min": 0.25,
+          "max": 0.55
+        },
+        "warmth": {
+          "min": 0.42,
+          "max": 0.78
+        },
+        "texture_variance": {
+          "min": 0.05,
+          "max": 0.22
+        }
+      },
+      "palette_bias": [
+        "pastel_pink",
+        "baby_blue",
+        "soft_yellow",
+        "lavender",
+        "mint_green"
+      ],
+      "techniques": [
+        "Oversized heads on tiny bodies (1:2 or 1:3 ratio)",
+        "Clean, thick outlines with rounded curves",
+        "Flat or simple 2-tone cel shading",
+        "Minimal facial features with exaggerated eyes",
+        "No texture \u2014 perfectly smooth surfaces"
+      ],
+      "mood": [
+        "cute",
+        "playful",
+        "adorable",
+        "lighthearted",
+        "kawaii"
+      ],
+      "description": "Chibi style, also called super deformed (SD), uses exaggerated proportions with oversized heads on tiny, simplified bodies. Clean outlines, flat bright colors, minimal shading, and enormous expressive eyes create an irresistibly cute, toy-like appearance.",
+      "style_transfer_prompt": "Convert this image into chibi / super deformed art style. Apply extreme proportion exaggeration: oversized head at 1:2 to 1:3 head-to-body ratio with a tiny, simplified body. Use clean, thick black outlines with soft rounded curves \u2014 no sharp angles anywhere. Render flat or simple 2-tone cel shading with no gradients or texture \u2014 surfaces should be perfectly smooth and matte. Minimize facial features: enormous sparkly eyes taking up 40% of the face, tiny dot nose, small simplified mouth, and no detailed ears or nostrils. Add small chibi-style details: stubby fingers, tiny shoes, simple hair blocks. Japanese kawaii aesthetic, adorable and toy-like, no realism whatsoever.",
+      "influences": "Japanese chibi art, SD Gundam, manga comedy scenes, kawaii culture, Nendoroid figures",
+      "key_artists": [
+        "CLAMP (chibi works)",
+        "Akira Toriyama (SD designs)",
+        "Koge-Donbo",
+        "Miyuki Miyabe",
+        "Rokudenashi"
+      ]
+    },
+    {
+      "name": "Line Art / Clean Line",
+      "era": "Modern",
+      "movement": "Line Art Illustration",
+      "characteristics": {
+        "saturation": {
+          "min": 0.0,
+          "max": 0.15
+        },
+        "brightness": {
+          "min": 0.5,
+          "max": 0.95
+        },
+        "edge_density": {
+          "min": 0.08,
+          "max": 0.3
+        },
+        "color_diversity": {
+          "min": 0.0,
+          "max": 0.1
+        },
+        "contrast": {
+          "min": 0.4,
+          "max": 0.85
+        },
+        "warmth": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "texture_variance": {
+          "min": 0.02,
+          "max": 0.15
+        }
+      },
+      "palette_bias": [
+        "black",
+        "white",
+        "off_white",
+        "ink_black",
+        "paper_cream"
+      ],
+      "techniques": [
+        "Pure black ink lines on white background",
+        "Consistent, uniform line weight throughout",
+        "No shading, no color \u2014 purely linear",
+        "Clean, flowing curves with precise junctions",
+        "Generous negative space and minimal mark-making"
+      ],
+      "mood": [
+        "minimal",
+        "elegant",
+        "clean",
+        "graphic",
+        "refined"
+      ],
+      "description": "Clean line art uses pure black outlines on white with no shading or color. Every line is intentional \u2014 uniform weight, flowing curves, and precise junctions create graphic elegance through extreme simplicity. Negative space is as important as the marks themselves.",
+      "style_transfer_prompt": "Convert this image into clean line art illustration \u2014 pure black ink lines on bright white paper, nothing else. Use consistent, uniform line weight throughout (0.5-1pt equivalent) with no variation for shading or depth. Render clean, flowing curves with precise, smooth junctions \u2014 every line is intentional and unbroken. Absolutely no shading, no hatching, no stippling, no color, no gray tones \u2014 just black line on white. Use generous negative space and minimal mark-making: suggest form with the fewest possible continuous lines. Lines should describe contours and key details only. The result should look like a vector illustration reduced to its essential linear structure. Pablo Picasso line drawings meet modern icon illustration, one-color screen print aesthetic, extreme graphic minimalism.",
+      "influences": "Pablo Picasso line drawings, modern icon design, single-line art, Matisse line work, minimal tattoo art",
+      "key_artists": [
+        "Pablo Picasso (line work)",
+        "Quibe",
+        "Shantell Martin",
+        "Egon Schiele (line drawings)",
+        "Frannerd"
+      ]
+    },
+    {
+      "name": "Glitch Art",
+      "era": "Modern Digital",
+      "movement": "Glitch Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.4,
+          "max": 0.9
+        },
+        "brightness": {
+          "min": 0.25,
+          "max": 0.7
+        },
+        "edge_density": {
+          "min": 0.35,
+          "max": 0.75
+        },
+        "color_diversity": {
+          "min": 0.35,
+          "max": 0.8
+        },
+        "contrast": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "warmth": {
+          "min": 0.2,
+          "max": 0.6
+        },
+        "texture_variance": {
+          "min": 0.45,
+          "max": 0.85
+        }
+      },
+      "palette_bias": [
+        "cyan",
+        "magenta",
+        "acid_green",
+        "black",
+        "electric_purple"
+      ],
+      "techniques": [
+        "RGB channel splitting and displacement",
+        "Horizontal pixel sorting and datamoshing",
+        "Scan line artifacts and screen tearing",
+        "Digital corruption and compression artifacts",
+        "Glowing chromatic aberration on edges"
+      ],
+      "mood": [
+        "dystopian",
+        "digital",
+        "chaotic",
+        "experimental",
+        "disruptive"
+      ],
+      "description": "Glitch art embraces digital errors as aesthetic \u2014 RGB channel splits, pixel sorting, datamoshing, scan lines, and compression artifacts. It's the beauty of corrupted data, celebrating the visual language of technological failure.",
+      "style_transfer_prompt": "Convert this image into glitch art style \u2014 embrace digital corruption as aesthetic. Add pixel sorting effects where columns or rows of pixels stretch and smear across the image. Include horizontal scan line artifacts, screen tearing bands, and VHS-style tracking distortion. Layer datamoshing effects where parts of the image dissolve into blocky compression artifacts. Final result should feel like corrupted digital video, broken file format, cyberpunk digital decay.",
+      "influences": "Databending, circuit bending, corrupted JPEGs, VHS degradation, early internet art",
+      "key_artists": [
+        "Rosa Menkman",
+        "Phillip Stearns",
+        "Sabato Visconti",
+        "Nick Briz",
+        "Antonio Roberts"
+      ]
+    },
+    {
+      "name": "Isometric Illustration",
+      "era": "Modern Digital",
+      "movement": "Isometric Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.35,
+          "max": 0.72
+        },
+        "brightness": {
+          "min": 0.45,
+          "max": 0.82
+        },
+        "edge_density": {
+          "min": 0.2,
+          "max": 0.5
+        },
+        "color_diversity": {
+          "min": 0.35,
+          "max": 0.72
+        },
+        "contrast": {
+          "min": 0.25,
+          "max": 0.55
+        },
+        "warmth": {
+          "min": 0.38,
+          "max": 0.68
+        },
+        "texture_variance": {
+          "min": 0.05,
+          "max": 0.22
+        }
+      },
+      "palette_bias": [
+        "teal",
+        "coral",
+        "soft_yellow",
+        "light_gray",
+        "warm_white"
+      ],
+      "techniques": [
+        "30-degree isometric perspective grid",
+        "Clean, geometric shapes with flat shading",
+        "No vanishing points \u2014 parallel projection",
+        "Three visible faces per object (top, left, right)",
+        "Consistent lighting from one corner direction"
+      ],
+      "mood": [
+        "clean",
+        "technical",
+        "modern",
+        "organized",
+        "satisfying"
+      ],
+      "description": "Isometric illustration uses a 30-degree parallel projection with no perspective vanishing points. Objects are built on a consistent grid with three visible faces, flat clean shading, and geometric precision. Popular in tech illustrations, game art, and infographics.",
+      "style_transfer_prompt": "Convert this image into isometric illustration style. Render the entire scene on a strict 30-degree isometric perspective grid \u2014 all lines run at exactly 30, 90, or 150 degrees with no vanishing points or perspective distortion. Every object should display three visible faces: top face, left face, and right face, each with flat consistent shading. Use clean, precise geometric shapes with sharp edges and no curves unless absolutely necessary. Apply flat vector shading with consistent lighting from the top-left corner: top faces brightest, left faces medium tone, right faces darkest. No gradients, no textures, no shadows \u2014 pure flat design on an isometric grid. Modern tech illustration style, infographic aesthetic, geometric precision.",
+      "influences": "Isometric video games (Monument Valley, SimCity), architectural drawing, technical illustration, infographics",
+      "key_artists": [
+        "Matt Chinworth",
+        "Jing Zhang",
+        "Marly Gallardo",
+        "Filipe Almeida",
+        "Mike Hall"
+      ]
+    },
+    {
+      "name": "Voxel Art",
+      "era": "Modern Digital",
+      "movement": "Voxel / 3D Pixel Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "brightness": {
+          "min": 0.45,
+          "max": 0.82
+        },
+        "edge_density": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "color_diversity": {
+          "min": 0.3,
+          "max": 0.65
+        },
+        "contrast": {
+          "min": 0.3,
+          "max": 0.6
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.68
+        },
+        "texture_variance": {
+          "min": 0.08,
+          "max": 0.28
+        }
+      },
+      "palette_bias": [
+        "bright_green",
+        "brown",
+        "blue",
+        "gray",
+        "yellow"
+      ],
+      "techniques": [
+        "Cube-based 3D pixel construction",
+        "Visible grid of individual voxel blocks",
+        "Flat shading per voxel face",
+        "Blocky, stepped edges on all forms",
+        "Limited palette with color-per-face mapping"
+      ],
+      "mood": [
+        "blocky",
+        "retro-3D",
+        "tactile",
+        "charming",
+        "geometric"
+      ],
+      "description": "Voxel art builds 3D forms from visible cube units, like 3D pixel art. Every surface is composed of individual block faces with flat shading, creating a chunky, stepped aesthetic that's distinctly tactile and geometric.",
+      "style_transfer_prompt": "Convert this image into voxel art style \u2014 render the scene as if built from visible 3D cube blocks (voxels), like Minecraft meets 3D pixel art. Every form and surface should be composed of clearly visible individual cube units, creating stepped, blocky edges on all curves and diagonals. Apply flat shading per voxel face \u2014 each cube face has one solid color with no gradients or blending. The aesthetic should feel like a detailed build in a voxel editor \u2014 MagicaVoxel, Teardown, or Crossy Road style. No smooth surfaces, no curves, no anti-aliasing \u2014 pure chunky cube geometry. Tactile 3D pixel aesthetic, game-ready block art.",
+      "influences": "Minecraft, MagicaVoxel, Crossy Road, Teardown, retro 3D graphics",
+      "key_artists": [
+        "Sir Carma",
+        "Mad Maraca",
+        "VoxelNoah",
+        "Epec",
+        "John Kearney"
+      ]
+    },
+    {
+      "name": "Duotone",
+      "era": "Modern",
+      "movement": "Duotone Illustration",
+      "characteristics": {
+        "saturation": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "brightness": {
+          "min": 0.35,
+          "max": 0.78
+        },
+        "edge_density": {
+          "min": 0.1,
+          "max": 0.35
+        },
+        "color_diversity": {
+          "min": 0.05,
+          "max": 0.2
+        },
+        "contrast": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "warmth": {
+          "min": 0.2,
+          "max": 0.75
+        },
+        "texture_variance": {
+          "min": 0.05,
+          "max": 0.25
+        }
+      },
+      "palette_bias": [
+        "highlight_color",
+        "shadow_color",
+        "mid_tone",
+        "light_base",
+        "dark_accent"
+      ],
+      "techniques": [
+        "Only two-color palette plus paper/background",
+        "All tones mapped from highlight to shadow color",
+        "Halftone or grain texture for tonal variation",
+        "High-contrast, graphic treatment",
+        "Screen-print or risograph aesthetic"
+      ],
+      "mood": [
+        "graphic",
+        "bold",
+        "retro-print",
+        "striking",
+        "minimal"
+      ],
+      "description": "Duotone style uses only two ink colors plus paper, mapping all tones from a highlight color through to a shadow color. The result is graphic, bold, and striking \u2014 like a screen print or risograph with halftone textures for tonal range.",
+      "style_transfer_prompt": "Convert this image into a duotone print illustration \u2014 use exactly two ink colors plus white paper, like a screen print or risograph. Map all highlights to the first ink color and all shadows to the second ink color, with paper white as the lightest tone. Apply halftone dot patterns or subtle grain texture to create midtones and smooth transitions between the two colors. The treatment should be high-contrast and graphic \u2014 strong silhouettes, bold color blocks, and minimal fine detail. The final result should look like a limited-edition screen print or risograph zine \u2014 slightly misregistered, with the tactile quality of ink on paper. No full-color gradients, just the magic of two inks creating a full image.",
+      "influences": "Screen printing, risograph printing, spot-color design, 1960s poster art, zine culture",
+      "key_artists": [
+        "Shepard Fairey",
+        "Aesthetic Apparatus",
+        "Methane Studios",
+        "Jay Ryan",
+        "Aaron Draplin"
+      ]
+    },
+    {
+      "name": "Matte Painting",
+      "era": "Modern Digital",
+      "movement": "Digital Matte Painting",
+      "characteristics": {
+        "saturation": {
+          "min": 0.25,
+          "max": 0.6
+        },
+        "brightness": {
+          "min": 0.3,
+          "max": 0.72
+        },
+        "edge_density": {
+          "min": 0.22,
+          "max": 0.55
+        },
+        "color_diversity": {
+          "min": 0.45,
+          "max": 0.85
+        },
+        "contrast": {
+          "min": 0.3,
+          "max": 0.65
+        },
+        "warmth": {
+          "min": 0.32,
+          "max": 0.68
+        },
+        "texture_variance": {
+          "min": 0.3,
+          "max": 0.68
+        }
+      },
+      "palette_bias": [
+        "atmospheric_blue",
+        "warm_golden",
+        "mist_gray",
+        "deep_green",
+        "orange_glow"
+      ],
+      "techniques": [
+        "Cinematic wide-screen compositions",
+        "Photorealistic environment blending",
+        "Atmospheric perspective with layered depth",
+        "Dramatic sky and lighting conditions",
+        "Photo-bashing and digital painting combined"
+      ],
+      "mood": [
+        "cinematic",
+        "epic",
+        "immersive",
+        "atmospheric",
+        "grand"
+      ],
+      "description": "Matte painting creates cinematic, wide-screen environments by blending photographs with digital painting. Used extensively in film and game production, it features dramatic lighting, atmospheric perspective, photorealistic detail, and epic scale.",
+      "style_transfer_prompt": "Convert this image into a cinematic matte painting style used in film and game production. Render a wide-screen, epic composition with photorealistic environment detail blended with digital painting techniques. Apply dramatic, cinematic lighting \u2014 golden hour sunbeams, crepuscular rays through clouds, or moody atmospheric haze. Use strong atmospheric perspective with layered depth: crisp detail in the foreground, softened midground with haze, and misty, desaturated background mountains or structures. Add photorealistic textures from photo-bashing: rock faces, clouds, water reflections, vegetation \u2014 seamlessly blended into a cohesive painted environment. The mood should be grand, epic, and immersive \u2014 like a keyframe from a blockbuster film. Matte painting quality, ILM and Weta Digital inspired, photoreal digital environment art.",
+      "influences": "Industrial Light and Magic, Weta Digital, Dylan Cole, Yanick Dusseault, matte painting for film",
+      "key_artists": [
+        "Dylan Cole",
+        "Yanick Dusseault",
+        "Sparth",
+        "Jaime Jones",
+        "Eytan Zana"
+      ]
+    },
+    {
+      "name": "Stylized 3D",
+      "era": "Modern Digital",
+      "movement": "Stylized 3D Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.42,
+          "max": 0.8
+        },
+        "brightness": {
+          "min": 0.4,
+          "max": 0.78
+        },
+        "edge_density": {
+          "min": 0.18,
+          "max": 0.45
+        },
+        "color_diversity": {
+          "min": 0.4,
+          "max": 0.78
+        },
+        "contrast": {
+          "min": 0.28,
+          "max": 0.6
+        },
+        "warmth": {
+          "min": 0.38,
+          "max": 0.72
+        },
+        "texture_variance": {
+          "min": 0.22,
+          "max": 0.5
+        }
+      },
+      "palette_bias": [
+        "vibrant_teal",
+        "warm_orange",
+        "purple",
+        "golden",
+        "mint"
+      ],
+      "techniques": [
+        "Non-photorealistic 3D rendering with exaggerated proportions",
+        "Hand-painted or procedural stylized textures",
+        "Cartoon-like character design with 3D depth",
+        "Bold rim lighting and subsurface scattering",
+        "Sculpted stylized forms with smooth surfaces"
+      ],
+      "mood": [
+        "playful",
+        "polished",
+        "charming",
+        "expressive",
+        "game-ready"
+      ],
+      "description": "Stylized 3D art combines 3D rendering with non-realistic, exaggerated design \u2014 cartoon proportions, hand-painted textures, bold colors, and expressive sculpting. Think Pixar, DreamWorks, Overwatch, and Fortnite \u2014 3D that embraces artistic style over photorealism.",
+      "style_transfer_prompt": "Convert this image into stylized 3D render style with non-photorealistic, artistic treatment. Apply hand-painted or procedural stylized textures instead of photorealistic materials \u2014 surfaces should look like painted sculpture. Use exaggerated, appealing proportions: slightly larger heads, simplified anatomy, expressive silhouettes. Render with bold rim lighting and soft subsurface scattering through stylized skin. Apply cel-shading-like shadow edges with subtle gradients for depth. Add subtle ambient occlusion in crevices and a soft spotlight highlight. The look should be game-ready stylized 3D \u2014 Pixar meets Overwatch, Blizzard and DreamWorks animation style, polished but deliberately non-realistic.",
+      "influences": "Pixar, DreamWorks, Overwatch, Fortnite, Blizzard Entertainment, Disney Infinity, modern game art",
+      "key_artists": [
+        "Tyson Murphy",
+        "Airi Pan",
+        "Vladimir Petic",
+        "Rael Lyra",
+        "Pedro Conti"
+      ]
+    },
+    {
+      "name": "Cel-Shaded 3D",
+      "era": "Modern Digital",
+      "movement": "Toon Rendering",
+      "characteristics": {
+        "saturation": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "brightness": {
+          "min": 0.45,
+          "max": 0.82
+        },
+        "edge_density": {
+          "min": 0.22,
+          "max": 0.52
+        },
+        "color_diversity": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "contrast": {
+          "min": 0.32,
+          "max": 0.68
+        },
+        "warmth": {
+          "min": 0.38,
+          "max": 0.72
+        },
+        "texture_variance": {
+          "min": 0.12,
+          "max": 0.35
+        }
+      },
+      "palette_bias": [
+        "bold_red",
+        "blue",
+        "yellow",
+        "green",
+        "black"
+      ],
+      "techniques": [
+        "3D geometry rendered with comic-style outlines",
+        "Flat or 2-tone cel shading on 3D forms",
+        "Bold ink-like contour lines on model edges",
+        "High-contrast shadow bands with hard edges",
+        "Screen-space outlines with variable thickness"
+      ],
+      "mood": [
+        "comic-3D",
+        "graphic",
+        "bold",
+        "animated",
+        "hand-drawn-3D"
+      ],
+      "description": "Cel-shaded 3D renders three-dimensional geometry with flat cel shading and bold outlines, making 3D look like a 2D comic or cartoon. Think Borderlands, Zelda: Breath of the Wild, and Guilty Gear \u2014 3D that looks hand-drawn.",
+      "style_transfer_prompt": "Convert this image into cel-shaded 3D render style \u2014 3D forms rendered with flat comic-style shading. Apply 2-3 tone cel shading on all 3D surfaces: a base color, a single sharp shadow tone with a hard edge, and a bright highlight. Render bold black ink-like contour lines on all object edges with variable thickness \u2014 thicker on silhouette edges, thinner on internal details. Use screen-space outlines that feel hand-drawn on top of 3D geometry. Shadows should have sharp, stepped edges with no smooth gradients. Apply a halftone dot pattern in shadow areas for texture. Borderlands and Zelda Breath of the Wild inspired, toon-shaded 3D, the impossible marriage of 3D depth with 2D graphic style.",
+      "influences": "Borderlands, Zelda: Breath of the Wild, Guilty Gear Xrd, Jet Set Radio, Viewtiful Joe, Arcane",
+      "key_artists": [
+        "Arcane (Fortiche)",
+        "Gearbox (Borderlands)",
+        "Arc System Works",
+        "Nintendo (Zelda)",
+        "Sega (Jet Set Radio)"
+      ]
+    },
+    {
+      "name": "Claymation / Stop-Motion",
+      "era": "Modern Digital",
+      "movement": "Stop-Motion / Claymation",
+      "characteristics": {
+        "saturation": {
+          "min": 0.3,
+          "max": 0.65
+        },
+        "brightness": {
+          "min": 0.35,
+          "max": 0.72
+        },
+        "edge_density": {
+          "min": 0.15,
+          "max": 0.4
+        },
+        "color_diversity": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "contrast": {
+          "min": 0.25,
+          "max": 0.55
+        },
+        "warmth": {
+          "min": 0.38,
+          "max": 0.68
+        },
+        "texture_variance": {
+          "min": 0.3,
+          "max": 0.62
+        }
+      },
+      "palette_bias": [
+        "clay_brown",
+        "felt_red",
+        "wool_gray",
+        "painted_wood",
+        "fabric_blue"
+      ],
+      "techniques": [
+        "Visible fingerprint and tool marks on clay",
+        "Slight irregularities from frame-by-frame posing",
+        "Felt, fabric, and wire materials visible",
+        "Practical miniature set textures",
+        "Soft, diffused studio lighting with subtle shadows"
+      ],
+      "mood": [
+        "tactile",
+        "handmade",
+        "nostalgic",
+        "charming",
+        "crafted"
+      ],
+      "description": "Claymation and stop-motion aesthetics simulate handcrafted puppets and miniature sets. Visible fingerprints on clay, slight pose irregularities, fabric textures, and practical lighting create an irresistibly tactile, handmade feel even in digital renders.",
+      "style_transfer_prompt": "Convert this image into claymation / stop-motion animation style. Render all surfaces as if hand-sculpted from modeling clay \u2014 visible fingerprint impressions and tool marks on every surface. Apply soft, slightly irregular forms with the slight asymmetry of hand-crafted puppets. Use clay-like materials with a matte, slightly waxy surface that catches light softly. Add fabric textures for clothing (felt, wool, burlap), visible wire armatures at joints, and painted wooden details. Lighting should be soft and diffused like a practical miniature studio setup \u2014 no harsh CGI shadows, just gentle falloff. Add subtle dust particles and miniature set imperfections. The overall feel should be tactile, handcrafted, and nostalgic \u2014 Aardman Animations (Wallace and Gromit) and Laika Studios (Coraline) style, hand-made stop-motion puppet aesthetic.",
+      "influences": "Aardman Animations, Laika Studios, Rankin/Bass, Tim Burton stop-motion, Henry Selick",
+      "key_artists": [
+        "Nick Park",
+        "Henry Selick",
+        "Tim Burton",
+        "Will Vinton",
+        "Ray Harryhausen"
+      ]
+    },
+    {
+      "name": "Origami",
+      "era": "Modern Digital",
+      "movement": "Origami Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.35,
+          "max": 0.75
+        },
+        "brightness": {
+          "min": 0.45,
+          "max": 0.85
+        },
+        "edge_density": {
+          "min": 0.25,
+          "max": 0.6
+        },
+        "color_diversity": {
+          "min": 0.25,
+          "max": 0.6
+        },
+        "contrast": {
+          "min": 0.3,
+          "max": 0.6
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.65
+        },
+        "texture_variance": {
+          "min": 0.1,
+          "max": 0.3
+        }
+      },
+      "palette_bias": [
+        "washi_cream",
+        "crimson",
+        "indigo",
+        "gold",
+        "soft_green"
+      ],
+      "techniques": [
+        "Folded paper geometry with sharp crease lines",
+        "Visible paper fiber texture on flat planes",
+        "Clean triangular and polygonal facets",
+        "Subtle paper translucency at edges",
+        "Matte paper surface with no reflections"
+      ],
+      "mood": [
+        "geometric",
+        "delicate",
+        "crafted",
+        "precise",
+        "serene"
+      ],
+      "description": "Origami style renders subjects as folded paper sculptures \u2014 sharp crease lines, triangular facets, matte paper textures with visible fiber. Light plays across flat paper planes creating subtle value changes, with delicate paper translucency at folded edges.",
+      "style_transfer_prompt": "Convert this image into origami folded paper art style. Apply sharp, precise crease lines where paper folds occur, with subtle highlight on the raised edge of each fold. Use clean triangular and polygonal facets \u2014 no smooth curves, everything is geometric folded planes. The paper surface should be matte with no reflections, just soft diffuse shading as light plays across the flat planes. Add subtle paper translucency and slight fiber separation at folded edges. The composition should feel delicate, precise, and crafted \u2014 like a master origami sculpture photographed in soft natural light.",
+      "influences": "Japanese origami, paper craft, polygonal art, Robert Lang origami designs, washi paper",
+      "key_artists": [
+        "Robert J. Lang",
+        "Sipho Mabona",
+        "Eric Joisel",
+        "Cristian Marianciuc",
+        "Nguyen Hung Cuong"
+      ]
+    },
+    {
+      "name": "Gouache Painting",
+      "era": "Modern / Contemporary",
+      "movement": "Gouache Illustration",
+      "characteristics": {
+        "saturation": {
+          "min": 0.35,
+          "max": 0.72
+        },
+        "brightness": {
+          "min": 0.38,
+          "max": 0.78
+        },
+        "edge_density": {
+          "min": 0.15,
+          "max": 0.4
+        },
+        "color_diversity": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "contrast": {
+          "min": 0.28,
+          "max": 0.6
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "texture_variance": {
+          "min": 0.3,
+          "max": 0.62
+        }
+      },
+      "palette_bias": [
+        "mint_green",
+        "coral",
+        "warm_gray",
+        "mustard",
+        "slate_blue"
+      ],
+      "techniques": [
+        "Opaque, matte paint with no transparency",
+        "Visible brush strokes with velvety finish",
+        "Bold, flat color areas with crisp edges",
+        "Layering light over dark (opposite of watercolor)",
+        "Smooth, creamy paint consistency"
+      ],
+      "mood": [
+        "bold",
+        "modern",
+        "matte",
+        "designerly",
+        "vibrant"
+      ],
+      "description": "Gouache is an opaque water-based paint with a distinctive velvety matte finish. It creates bold flat color areas with crisp edges, visible brush texture, and a modern illustration aesthetic \u2014 popular in editorial, fashion, and design illustration.",
+      "style_transfer_prompt": "Convert this image into gouache painting illustration style. Apply opaque, velvety matte paint with zero transparency \u2014 colors sit solidly on the surface. Use bold flat color areas with crisp, clean edges and visible brush strokes showing the creamy paint consistency. Layer lighter opaque colors over darker backgrounds (the reverse of watercolor technique). The paint should have a soft, matte, almost powdery finish \u2014 no gloss or reflections. Add subtle brush texture and slight paint buildup at the edges of strokes. The result should feel like a professional editorial or fashion illustration painted with Winsor and Newton gouache on hot-press watercolor paper. Bold, graphic, and contemporary gouache aesthetic.",
+      "influences": "Winsor and Newton, modern editorial illustration, Miroslav Sasek, Charley Harper, fashion illustration",
+      "key_artists": [
+        "Miroslav Sasek",
+        "Charley Harper",
+        "Mary Blair",
+        "Nicolas Bentley",
+        "Marcos Chin"
+      ]
+    },
+    {
+      "name": "Pastel / Chalk Art",
+      "era": "Classical / Modern",
+      "movement": "Pastel Drawing",
+      "characteristics": {
+        "saturation": {
+          "min": 0.25,
+          "max": 0.62
+        },
+        "brightness": {
+          "min": 0.35,
+          "max": 0.78
+        },
+        "edge_density": {
+          "min": 0.12,
+          "max": 0.38
+        },
+        "color_diversity": {
+          "min": 0.38,
+          "max": 0.78
+        },
+        "contrast": {
+          "min": 0.2,
+          "max": 0.52
+        },
+        "warmth": {
+          "min": 0.35,
+          "max": 0.68
+        },
+        "texture_variance": {
+          "min": 0.4,
+          "max": 0.75
+        }
+      },
+      "palette_bias": [
+        "soft_pink",
+        "powder_blue",
+        "peach",
+        "lavender",
+        "cream"
+      ],
+      "techniques": [
+        "Soft, powdery pigment on textured paper",
+        "Blended, diffused edges with no hard lines",
+        "Dry pigment dust visible on the surface",
+        "Layered color blending through smudging",
+        "Paper tooth showing through pastel strokes"
+      ],
+      "mood": [
+        "soft",
+        "dreamy",
+        "delicate",
+        "romantic",
+        "ethereal"
+      ],
+      "description": "Pastel and chalk art uses dry, powdery pigment sticks on textured paper. Colors are soft and blended through smudging, edges are diffused with no hard lines, and the paper tooth shows through pastel strokes creating a delicate, dreamy texture.",
+      "style_transfer_prompt": "Convert this image into soft pastel chalk art style. Apply dry, powdery pigment strokes on heavily textured pastel paper \u2014 the paper tooth should be visible throughout, catching and holding the chalk dust. Use soft, blended color transitions created through smudging and layering with no hard edges or sharp lines anywhere. Allow dry pigment dust to visibly sit on the surface with a delicate, fragile quality. Build colors through layered cross-hatched pastel strokes in varying directions. The Add subtle pastel dust settling at the bottom of the image. The overall effect should be delicate, ethereal, and romantic \u2014 Edgar Degas pastels meet contemporary soft chalk illustration.",
+      "influences": "Edgar Degas, Mary Cassatt, Odilon Redon, Rosalba Carriera, contemporary chalk art",
+      "key_artists": [
+        "Edgar Degas",
+        "Mary Cassatt",
+        "Odilon Redon",
+        "Jean-Baptiste Chardin",
+        "Wolf Kahn"
+      ]
+    },
+    {
+      "name": "Manga",
+      "era": "Modern",
+      "movement": "Manga / Japanese Comics",
+      "characteristics": {
+        "saturation": {
+          "min": 0.0,
+          "max": 0.08
+        },
+        "brightness": {
+          "min": 0.45,
+          "max": 0.9
+        },
+        "edge_density": {
+          "min": 0.2,
+          "max": 0.52
+        },
+        "color_diversity": {
+          "min": 0.0,
+          "max": 0.1
+        },
+        "contrast": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "warmth": {
+          "min": 0.3,
+          "max": 0.5
+        },
+        "texture_variance": {
+          "min": 0.1,
+          "max": 0.3
+        }
+      },
+      "palette_bias": [
+        "ink_black",
+        "paper_white",
+        "screen_tone_gray",
+        "pure_black",
+        "off_white"
+      ],
+      "techniques": [
+        "Pure black ink on white with screen tones",
+        "Hatching and cross-hatching for shading",
+        "Zip-a-tone and halftone screen pattern overlays",
+        "Dynamic speed lines and action effects",
+        "Varied line weights defining form and depth"
+      ],
+      "mood": [
+        "dramatic",
+        "expressive",
+        "dynamic",
+        "intimate",
+        "hand-drawn"
+      ],
+      "description": "Black and white manga style uses pure black ink on white with screen tone overlays. Dynamic line weights, speed lines, halftone dot patterns, and expressive hatching create drama and depth \u2014 the visual language of Japanese comic storytelling.",
+      "style_transfer_prompt": "Convert this image into black and white manga comic page style. Render in pure black ink on bright white paper with absolutely no color. Use varied line weights: thick bold lines for character outlines and silhouettes, thin delicate lines for facial features and background details. Apply hatching and cross-hatching for depth and shadow. Overlay screen tone patterns (zip-a-tone dots) in varying densities for gray tones \u2014 10L, 20L, 40L halftone screens. Add dynamic speed lines and action effects radiating from focal points. Include panel borders and speech bubble outlines for authentic manga page feel. The contrast should be high \u2014 deep blacks against bright whites with screen tone grays bridging the tones. Weekly Shonen Jump aesthetic, black and white manga, expressive pen and ink storytelling.",
+      "influences": "Shonen Jump, Osamu Tezuka, Katsuhiro Otomo, Takehiko Inoue, Junji Ito, manga publishing",
+      "key_artists": [
+        "Osamu Tezuka",
+        "Katsuhiro Otomo",
+        "Takehiko Inoue",
+        "Junji Ito",
+        "Naoki Urasawa"
+      ]
+    },
+    {
+      "name": "Children's Book Illustration",
+      "era": "Modern",
+      "movement": "Picture Book Art",
+      "characteristics": {
+        "saturation": {
+          "min": 0.35,
+          "max": 0.7
+        },
+        "brightness": {
+          "min": 0.48,
+          "max": 0.88
+        },
+        "edge_density": {
+          "min": 0.12,
+          "max": 0.35
+        },
+        "color_diversity": {
+          "min": 0.42,
+          "max": 0.82
+        },
+        "contrast": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "warmth": {
+          "min": 0.45,
+          "max": 0.82
+        },
+        "texture_variance": {
+          "min": 0.2,
+          "max": 0.52
+        }
+      },
+      "palette_bias": [
+        "warm_yellow",
+        "soft_green",
+        "sky_blue",
+        "peach",
+        "brown"
+      ],
+      "techniques": [
+        "Warm, inviting color palettes with gentle contrast",
+        "Soft, rounded shapes with no sharp angles",
+        "Expressive but simple character designs",
+        "Mixed media textures (pencil, paint, paper)",
+        "Storybook page layouts with generous margins"
+      ],
+      "mood": [
+        "warm",
+        "whimsical",
+        "gentle",
+        "imaginative",
+        "comforting"
+      ],
+      "description": "Children's book illustration uses warm, inviting palettes, soft rounded shapes, and expressive simple characters. Gentle contrast, mixed media textures, and storybook compositions create a safe, imaginative world that appeals to young readers and the young at heart.",
+      "style_transfer_prompt": "Convert this image into children's picture book illustration style. Render all shapes with soft, rounded edges \u2014 avoid sharp angles and points. Design simple, expressive characters with clear readable emotions on their faces. Apply mixed media textures: soft pencil underdrawings visible beneath paint, watercolor washes, and crayon-like textures. Use gentle, low contrast \u2014 soft shadows and diffused lighting with a warm overall glow. Include textured paper background and generous compositional margins. The feel should be cozy, imaginative, and safe \u2014 like opening a beloved childhood storybook. Beatrix Potter and Oliver Jeffers inspired, classic picture book aesthetic, hand-crafted warmth.",
+      "influences": "Beatrix Potter, Oliver Jeffers, Eric Carle, Maurice Sendak, classic picture books, children's publishing",
+      "key_artists": [
+        "Beatrix Potter",
+        "Oliver Jeffers",
+        "Eric Carle",
+        "Maurice Sendak",
+        "Christian Robinson"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "2.0",
+    "description": "Digital art style database. Edit styles, characteristics ranges, techniques, and metadata to customize analysis.",
+    "fields_guide": {
+      "characteristics": "Each field defines a min/max range (0-1) for the feature. Images are scored on each axis and matched against these ranges.",
+      "palette_bias": "Suggested dominant color names for the style (for description generation).",
+      "techniques": "List of techniques associated with this style.",
+      "mood": "List of mood/atmosphere descriptors.",
+      "description": "Narrative description of the style.",
+      "influences": "Historical and artistic influences.",
+      "key_artists": "Notable artists associated with this style."
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Style Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Art Style Analyzer</h1>
+            <p class="subtitle">Upload an image to discover its art style in detail</p>
+        </header>
+
+        <div id="upload-section">
+            <div id="drop-zone" class="drop-zone">
+                <div class="drop-zone-content">
+                    <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="17 8 12 3 7 8"/>
+                        <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    <p>Drag & drop an image here</p>
+                    <span class="or-text">or</span>
+                    <label for="file-input" class="browse-btn">Browse Files</label>
+                    <input type="file" id="file-input" accept="image/*" hidden>
+                </div>
+                <div id="preview-container" class="preview-container hidden">
+                    <img id="preview-image" alt="Preview">
+                    <button id="clear-btn" class="clear-btn" title="Remove image">&times;</button>
+                </div>
+            </div>
+            <button id="analyze-btn" class="analyze-btn" disabled>Analyze Art Style</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Analyzing art style...</p>
+        </div>
+
+        <div id="results" class="results hidden">
+            <div class="results-grid">
+                <div class="results-image">
+                    <img id="result-image" alt="Analyzed image">
+                </div>
+                <div class="results-report" id="results-report">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
