@@ -24,9 +24,12 @@ git clone https://github.com/0xUzy/art-style-analyzer.git
 cd art-style-analyzer
 
 # Setup virtual environment
-python3 -m venv venv
-source venv/bin/activate   # macOS/Linux
-# venv\Scripts\activate    # Windows
+python -m venv venv
+
+# Activate (macOS / Linux)
+source venv/bin/activate
+# Activate (Windows)
+venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
