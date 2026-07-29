@@ -1,7 +1,13 @@
 import numpy as np
 from PIL import Image
-from colorthief import ColorThief
 from collections import Counter
+
+
+def _load_image(image_or_path):
+    """Return a PIL RGB image from a file path or an existing Image object."""
+    if isinstance(image_or_path, Image.Image):
+        return image_or_path.convert("RGB")
+    return Image.open(image_or_path).convert("RGB")
 
 
 def rgb_to_hsv(r, g, b):
@@ -27,7 +33,7 @@ def classify_color_name(r, g, b):
     if s < 0.15:
         if v < 0.2:
             return "black"
-        elif v < 0.5:
+        elif v <= 0.55:
             return "gray"
         elif v < 0.8:
             return "light_gray"
@@ -38,7 +44,7 @@ def classify_color_name(r, g, b):
         return "dark"
 
     if h < 0.05 or h >= 0.95:
-        if s > 0.7 and v > 0.7:
+        if s > 0.8 and v > 0.85:
             return "bright_red"
         elif v < 0.5:
             return "dark_red"
@@ -52,7 +58,7 @@ def classify_color_name(r, g, b):
     elif h < 0.25:
         return "yellow_green" if s > 0.5 else "olive"
     elif h < 0.45:
-        if s > 0.7 and v > 0.7:
+        if s > 0.8 and v > 0.85:
             return "bright_green"
         elif v < 0.4:
             return "dark_green"
@@ -61,15 +67,15 @@ def classify_color_name(r, g, b):
         if s > 0.6:
             return "teal"
         return "cyan"
-    elif h < 0.65:
+    elif h < 0.70:
         if v > 0.8:
             return "light_blue"
         elif v < 0.4:
             return "dark_blue"
         return "blue"
-    elif h < 0.75:
+    elif h < 0.82:
         return "purple" if v > 0.5 else "dark_purple"
-    elif h < 0.85:
+    elif h < 0.90:
         return "magenta" if s > 0.6 else "mauve"
     else:
         if v > 0.8 and s > 0.5:
@@ -113,26 +119,35 @@ def _extract_color_histogram_features(h, s, v, num_hue_bins=12, num_sat_bins=4, 
     return features
 
 
+def _circular_distance(h1, h2):
+    """Compute circular distance on [0, 1) wrapping correctly."""
+    d = np.abs(h1 - h2)
+    return np.minimum(d, 1 - d)
+
+
 def _compute_color_harmony(h, s, v):
     dominant_hue_bin = np.argmax(np.bincount(
         np.clip((h * 12).astype(int), 0, 11), minlength=12
     ))
     dominant_hue = dominant_hue_bin / 12.0
 
-    complementary_diff = min(abs(h - ((dominant_hue + 0.5) % 1.0)), key=lambda x: x) if len(h) > 0 else 0
-    complementary_score = float(np.mean(np.abs(h - ((dominant_hue + 0.5) % 1.0)) < 0.08))
+    complementary_score = float(np.mean(
+        _circular_distance(h, (dominant_hue + 0.5) % 1.0) < 0.08
+    ))
 
     triadic_score = float(np.mean(
-        (np.abs(h - ((dominant_hue + 1/3) % 1.0)) < 0.08) |
-        (np.abs(h - ((dominant_hue + 2/3) % 1.0)) < 0.08)
+        (_circular_distance(h, (dominant_hue + 1/3) % 1.0) < 0.08) |
+        (_circular_distance(h, (dominant_hue + 2/3) % 1.0) < 0.08)
     ))
 
     analogous_score = float(np.mean(
-        (np.abs(h - ((dominant_hue + 1/12) % 1.0)) < 0.06) |
-        (np.abs(h - ((dominant_hue - 1/12) % 1.0)) < 0.06)
+        (_circular_distance(h, (dominant_hue + 1/12) % 1.0) < 0.06) |
+        (_circular_distance(h, (dominant_hue - 1/12) % 1.0) < 0.06)
     ))
 
-    monochromatic_score = float(np.mean(np.abs(h - dominant_hue) < 0.04))
+    monochromatic_score = float(np.mean(
+        _circular_distance(h, dominant_hue) < 0.04
+    ))
 
     return {
         "complementary": round(complementary_score, 4),
@@ -142,20 +157,46 @@ def _compute_color_harmony(h, s, v):
     }
 
 
-def analyze_colors(image_path):
-    img = Image.open(image_path).convert("RGB")
+def _get_dominant_and_palette(img, color_count=8):
+    """Extract dominant color and palette using PIL quantization.
+
+    This avoids the external ColorThief dependency and works directly on a
+    Pillow Image object, matching the intended linear data flow.
+    """
+    small = img.resize((150, 150))
+    quantized = small.quantize(colors=color_count, method=Image.Quantize.MEDIANCUT)
+    palette = quantized.getpalette()[: color_count * 3]
+    colors = [(palette[i], palette[i + 1], palette[i + 2]) for i in range(0, len(palette), 3)]
+    dominant = colors[0]
+    return dominant, colors
+
+
+def _saturation_label(val):
+    if val < 0.2: return "muted/desaturated"
+    if val < 0.4: return "moderately muted"
+    if val < 0.6: return "moderate saturation"
+    if val < 0.8: return "saturated"
+    return "highly saturated/vivid"
+
+
+def _diversity_label(val):
+    if val < 0.2: return "very limited palette"
+    if val < 0.4: return "limited palette"
+    if val < 0.6: return "moderate range"
+    if val < 0.8: return "diverse palette"
+    return "highly diverse"
+
+
+def analyze_colors(image_or_path):
+    img = _load_image(image_or_path)
     img_small = img.resize((200, 200))
     pixels = np.array(img_small).reshape(-1, 3).astype(float) / 255.0
 
-    ct = ColorThief(image_path)
     try:
-        dominant = ct.get_color(quality=1)
+        dominant, palette = _get_dominant_and_palette(img, color_count=8)
     except Exception:
+        # Fallback to a single-pixel resize if quantization fails.
         dominant = tuple(img_small.resize((1, 1)).getpixel((0, 0)))
-
-    try:
-        palette = ct.get_palette(color_count=8, quality=1)
-    except Exception:
         palette = [dominant]
 
     r, g, b = pixels[:, 0], pixels[:, 1], pixels[:, 2]
@@ -183,7 +224,10 @@ def analyze_colors(image_path):
     r_var = float(np.var(r))
     g_var = float(np.var(g))
     b_var = float(np.var(b))
-    rgb_correlation = float(np.corrcoef(np.stack([r, g, b]))[0, 1]) if len(r) > 1 else 0
+    if np.std(r) > 0 and np.std(g) > 0 and np.std(b) > 0:
+        rgb_correlation = float(np.corrcoef(np.stack([r, g, b]))[0, 1])
+    else:
+        rgb_correlation = 0.0
 
     color_feature_vector = [
         saturation,

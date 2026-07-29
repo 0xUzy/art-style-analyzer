@@ -3,9 +3,17 @@ from PIL import Image
 import cv2
 
 
-def analyze_lighting(image_path):
-    img = Image.open(image_path).convert("L")
-    img_np = np.array(img).astype(np.float32) / 255.0
+def _load_image(image_or_path):
+    """Return a PIL RGB image from a file path or an existing Image object."""
+    if isinstance(image_or_path, Image.Image):
+        return image_or_path.convert("RGB")
+    return Image.open(image_or_path).convert("RGB")
+
+
+def analyze_lighting(image_or_path):
+    img = _load_image(image_or_path)
+    img_gray = img.convert("L")
+    img_np = np.array(img_gray).astype(np.float32) / 255.0
     h, w = img_np.shape
 
     mean_brightness = float(np.mean(img_np))

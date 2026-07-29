@@ -4,9 +4,17 @@ import cv2
 from skimage.feature import local_binary_pattern, hog
 
 
-def analyze_composition(image_path):
-    img = Image.open(image_path).convert("L")
-    img_np = np.array(img).astype(np.float32) / 255.0
+def _load_image(image_or_path):
+    """Return a PIL RGB image from a file path or an existing Image object."""
+    if isinstance(image_or_path, Image.Image):
+        return image_or_path.convert("RGB")
+    return Image.open(image_or_path).convert("RGB")
+
+
+def analyze_composition(image_or_path):
+    img = _load_image(image_or_path)
+    img_gray = img.convert("L")
+    img_np = np.array(img_gray).astype(np.float32) / 255.0
     h, w = img_np.shape
 
     img_uint8 = (img_np * 255).astype(np.uint8)
@@ -53,7 +61,7 @@ def analyze_composition(image_path):
     complexity = float(np.mean(edges > 0))
     simplicity = 1.0 - complexity
 
-    img_resized = img.resize((128, 128))
+    img_resized = img_gray.resize((128, 128))
     img_np_128 = np.array(img_resized).astype(np.float32) / 255.0
     img_uint8_128 = (img_np_128 * 255).astype(np.uint8)
 
