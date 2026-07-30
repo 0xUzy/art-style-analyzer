@@ -19,8 +19,11 @@ const newAnalysisBtn = document.getElementById("new-analysis-btn");
 const statsGrid = document.getElementById("stats-grid");
 const loadingSteps = document.querySelectorAll(".loading-step");
 const navbar = document.querySelector(".navbar");
+const heroSection = document.querySelector(".hero-section");
 
 let selectedFile = null;
+
+const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // ============================================
 // Navbar scroll effect
@@ -35,6 +38,21 @@ window.addEventListener("scroll", () => {
     }
     lastScroll = scrollY;
 }, { passive: true });
+
+// Click-to-copy for palette swatches
+statsGrid.addEventListener("click", (e) => {
+    const swatch = e.target.closest("[data-hex]");
+    if (!swatch) return;
+    const hex = swatch.dataset.hex;
+    navigator.clipboard.writeText(hex).catch(() => {
+        const ta = document.createElement("textarea");
+        ta.value = hex;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+    });
+});
 
 // ============================================
 // Drop zone interactions
@@ -79,7 +97,8 @@ clearBtn.addEventListener("click", (e) => {
 analyzeBtn.addEventListener("click", analyzeImage);
 newAnalysisBtn.addEventListener("click", () => {
     results.classList.add("hidden");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    heroSection.classList.remove("collapsed");
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" });
     setTimeout(() => {
         uploadSection.classList.remove("hidden");
         resetUpload();
@@ -116,24 +135,33 @@ function resetUpload() {
 // Loading animation with step progression
 // ============================================
 let loadingTimer = null;
+const STEP_INTERVAL = 800;
+const STEP_COMPLETION_OFFSET = 1200;
+
 function startLoadingAnimation() {
+    if (prefersReducedMotion()) {
+        loadingSteps.forEach((step) => {
+            step.classList.remove("active", "completed");
+            step.classList.add("completed");
+        });
+        return;
+    }
+
     loadingSteps.forEach((step, i) => {
         step.classList.remove("active", "completed");
         setTimeout(() => {
             step.classList.add("active");
-        }, i * 800);
+        }, i * STEP_INTERVAL);
     });
 
-    // Mark steps as completed progressively
     loadingSteps.forEach((step, i) => {
         setTimeout(() => {
             step.classList.remove("active");
             step.classList.add("completed");
-            // Activate next step
             if (i + 1 < loadingSteps.length) {
                 loadingSteps[i + 1].classList.add("active");
             }
-        }, (i + 1) * 800 + 1200);
+        }, (i + 1) * STEP_INTERVAL + STEP_COMPLETION_OFFSET);
     });
 }
 
@@ -152,10 +180,11 @@ async function analyzeImage() {
     // Hide other sections, show loading
     uploadSection.classList.add("hidden");
     results.classList.add("hidden");
+    heroSection.classList.add("collapsed");
     loading.classList.remove("hidden");
 
     // Scroll to loading
-    loading.scrollIntoView({ behavior: "smooth", block: "center" });
+    loading.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "center" });
 
     // Start the animated loading steps
     resetLoadingAnimation();
@@ -187,16 +216,14 @@ async function analyzeImage() {
         renderResults(data);
         results.classList.remove("hidden");
 
-        // Scroll to results
-        setTimeout(() => {
-            results.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 100);
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" });
 
     } catch (err) {
         loading.classList.add("hidden");
         loadingSteps.forEach((step) => {
             step.classList.remove("active", "completed");
         });
+        heroSection.classList.remove("collapsed");
         showError("Analysis failed. Please check your connection and try again.");
     }
 }
@@ -240,6 +267,7 @@ function showError(msg) {
 
     setTimeout(() => {
         if (banner.parentElement) banner.remove();
+        heroSection.classList.remove("collapsed");
         uploadSection.classList.remove("hidden");
     }, 5000);
 }
@@ -247,28 +275,75 @@ function showError(msg) {
 // ============================================
 // Results rendering
 // ============================================
+function rgbToHex(rgb) {
+    if (!Array.isArray(rgb) || rgb.length < 3) return "#666";
+    return "#" + rgb.slice(0, 3).map(v => v.toString(16).padStart(2, "0")).join("");
+}
+
+function buildMetric(label, value, color) {
+    const pct = Math.round(value * 100);
+    return `
+        <div class="metric">
+            <span class="metric-label">${label}</span>
+            <div class="metric-bar-track">
+                <div class="metric-bar-fill" style="width:0%;background:${color}" data-width="${pct}%"></div>
+            </div>
+            <span class="metric-value">${pct}%</span>
+        </div>
+    `;
+}
+
+function buildQuickStat(label, value) {
+    return `
+        <div class="overview-quickstat">
+            <span class="overview-quickstat-label">${label}</span>
+            <span class="overview-quickstat-value">${formatPercent(value)}</span>
+        </div>
+    `;
+}
+
 function renderResults(data) {
     resultImage.src = data.image_url;
     resultsReport.innerHTML = "";
     statsGrid.innerHTML = "";
 
     // ---- Stats Overview ----
-    const stats = [
-        { label: "Color Temperature", value: data.features.colors.temperature, cls: "warm" },
-        { label: "Saturation", value: formatPercent(data.features.colors.saturation), cls: "accent" },
-        { label: "Brightness", value: formatPercent(data.features.colors.brightness), cls: "" },
-        { label: "Lighting", value: data.features.lighting.key_type, cls: "accent2" },
-        { label: "Composition", value: data.features.composition.composition_type, cls: "" },
-        { label: "Contrast", value: formatPercent(data.features.lighting.contrast), cls: "" },
-        { label: "Texture", value: formatPercent(data.features.composition.texture_variance), cls: "" },
-        { label: "Complexity", value: formatPercent(data.features.composition.complexity), cls: "" },
-    ];
+    const c = data.features.colors;
+    const l = data.features.lighting;
 
-    stats.forEach(s => {
-        const el = document.createElement("div");
-        el.className = "stat-item";
-        el.innerHTML = `<span class="stat-label">${s.label}</span><span class="stat-value ${s.cls}">${s.value}</span>`;
-        statsGrid.appendChild(el);
+    const paletteHtml = (c.palette || []).map(p =>
+        `<div class="overview-palette-swatch" style="background:${p.hex}" data-hex="${p.hex}" title="${escapeHtml(p.name)} — ${p.hex}">
+            <span class="overview-palette-hex">${p.hex}</span>
+        </div>`
+    ).join("");
+
+    const dominantHex = c.palette && c.palette.length > 0 ? c.palette[0].hex : rgbToHex(c.dominant_color);
+
+    statsGrid.innerHTML = `
+        <div class="overview-palette">
+            <div class="overview-palette-strip">${paletteHtml}</div>
+            <div class="overview-dominant">
+                <div class="overview-dominant-swatch" style="background:${dominantHex}"></div>
+                <span class="overview-dominant-hex">${dominantHex}</span>
+            </div>
+        </div>
+        <div class="overview-quickstats">
+            ${buildQuickStat("Saturation", c.saturation)}
+            ${buildQuickStat("Contrast", l.contrast)}
+            ${buildQuickStat("Warmth", c.warmth)}
+            <div class="overview-quickstat">
+                <span class="overview-quickstat-label">Light</span>
+                <span class="overview-quickstat-value">${escapeHtml(l.light_direction)}</span>
+            </div>
+        </div>
+    `;
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            statsGrid.querySelectorAll(".metric-bar-fill").forEach(el => {
+                el.style.width = el.dataset.width;
+            });
+        });
     });
 
     // ---- Style Cards ----
@@ -303,7 +378,7 @@ function renderResults(data) {
         setTimeout(() => {
             const fill = card.querySelector(".confidence-fill");
             if (fill) fill.style.width = s.confidence + "%";
-        }, 200 + idx * 150);
+        }, prefersReducedMotion() ? 50 : 200 + idx * 150);
 
         // Analysis breakdown sections
         if (s.analysis_breakdown) {
@@ -378,19 +453,6 @@ function renderResults(data) {
                 <div><div class="tags">`;
             s.style.mood.forEach((m) => {
                 html += `<span class="tag">${escapeHtml(m)}</span>`;
-            });
-            html += `</div></div></div>`;
-        }
-
-        // Color palette
-        if (data.features.colors.palette && data.features.colors.palette.length) {
-            html += `<div class="analysis-section">
-                <div class="analysis-section-header">
-                    <h4>Color Palette</h4>
-                </div>
-                <div><div class="palette-strip">`;
-            data.features.colors.palette.forEach((c) => {
-                html += `<div class="palette-swatch" style="background:${c.hex}" title="${escapeHtml(c.name)}"><span class="tooltip">${escapeHtml(c.name)}<br>${c.hex}</span></div>`;
             });
             html += `</div></div></div>`;
         }

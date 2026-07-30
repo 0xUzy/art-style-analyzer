@@ -34,8 +34,8 @@
             </a>
             <div class="nav-links" role="menubar">
                 <a href="/" class="nav-link active" role="menuitem" aria-current="page">Analyze</a>
-                <a href="#how-it-works" class="nav-link" role="menuitem" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">How It Works</a>
-                <a href="#features" class="nav-link" role="menuitem" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">Features</a>
+                <a href="#how-it-works" class="nav-link" role="menuitem" onclick="(window.matchMedia('(prefers-reduced-motion: reduce)').matches ? document.getElementById('how-it-works').scrollIntoView() : document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'}))">How It Works</a>
+                <a href="#features" class="nav-link" role="menuitem" onclick="(window.matchMedia('(prefers-reduced-motion: reduce)').matches ? document.getElementById('features').scrollIntoView() : document.getElementById('features').scrollIntoView({behavior:'smooth'}))">Features</a>
             </div>
         </div>
     </nav>
@@ -44,7 +44,7 @@
 
         <!-- Hero Section -->
         <section class="hero-section" aria-label="Image upload and analysis">
-            <div class="hero-content">
+            <div id="hero-content" class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
                     AI-Powered Art Intelligence
