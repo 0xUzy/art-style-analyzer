@@ -8,3 +8,6 @@ dist/
 build/
 .DS_Store
 .claude/
+
+# second brain (symlink to personal Obsidian vault; never commit)
+/brain
