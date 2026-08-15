@@ -7,7 +7,7 @@ static/uploads/*
 dist/
 build/
 .DS_Store
-.claude/
+.claude/skills/
 
 # second brain (symlink to personal Obsidian vault; never commit)
 /brain
