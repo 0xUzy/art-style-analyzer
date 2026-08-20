@@ -30,7 +30,7 @@ This document serves as a blueprint for future development or agent interaction 
 *   **ML Inference:** All calls to the Hugging Face Transformers library must be wrapped in a dedicated utility class (`utils/clip_wrapper.py`) to handle model loading, caching, and device placement (CPU/CUDA) uniformly.
 ## Second brain
 
-- The project's second brain is the **"Uzy's Workspace"** Obsidian vault, reachable at `brain/` (a symlink to `/Users/apple/Documents/Obsidian Vaults/Uzy's Workspace`). It is gitignored — never commit anything under it.
+- The project's second brain is the **"Uzy Workspace"** Obsidian vault, reachable at `brain/` (a symlink to `/Users/apple/Documents/Obsidian Vaults/Uzy Workspace`). It is gitignored — never commit anything under it.
 - **Before starting any task, read `brain/00-INDEX.md` and `brain/Projects/art-style-analyzer/art-style-analyzer.md` for full context on this project and how I work.**
 
 ## Agentic / RAG status
